@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --black: #171717;
+    --white: #ffffff;
+    --gray-black: #191816;
+    --gray: #818181;
+    --light-gray: #e3e3e3;
+    --yellow: #ffb423;
+    --dark-gray: #575757;
+    --another-light-gray: #f7f7f7;
+    --black-gray: #7d7d7d;
+    --transparent: rgba(0, 0, 0, 0);
+    --width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--white);
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.op0 {
+    opacity: 0;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+}
+
+.learnmoreBtn,
+.launchappBtn {
+    min-width: 165px;
+    text-align: center;
+}
+
+.blackBtn,
+.yellowBtn {
+    transition: all 0.1 ease-in-out;
+}
+
+.blackBtn:hover {
+    background: var(--yellow)!important;
+    color: var(--black)!important;
+}
+
+.yellowBtn:hover{
+    background: var(--black)!important;
+    color: var(--white)!important;
+}
+
+.deskHidden {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .deskHidden {
+        display: hidden;
+    }
+}
