@@ -6,15 +6,14 @@ let horizontalScroll;
 let chooseTimeline;
 let worksTl;
 
+
+
 const DeskTimeline = () => {
-
-    console.log("this is being")
-
     horizontalScroll = gsap.timeline({
         scrollTrigger: {
             trigger: '.section2',
             start: 'top top',
-            end: '800% top',
+            end: '1200% top',
             scrub: 1,
             pin: true,
         }
@@ -22,18 +21,30 @@ const DeskTimeline = () => {
 
     const slideItem = document.getElementsByClassName('slideItem')[0]
     const sideScroll = () => {
-        if (window.innerWidth > 1500)
+        if (window.innerWidth > 1500) {
+            console.log("this is being1")
             return 6.2
-        if (window.innerWidth > 1400)
+        }
+        if (window.innerWidth > 1400) {
+            console.log("this is being2")
             return 6.4
-        else if (window.innerWidth > 1200)
+        }
+        else if (window.innerWidth > 1200) {
+            console.log("this is being3")
             return 6.5
-        else if (window.innerWidth > 1000)
+        }
+        else if (window.innerWidth > 1000) {
+            console.log("this is being4")
             return 7.3
-        else if (window.innerWidth > 800)
+        }
+        else if (window.innerWidth > 800) {
+            console.log("this is being5")
             return 7.6
-        else
+        }
+        else {
+            console.log("this is being6")
             return 3.5
+        }
     }
     horizontalScroll
         .to('.slideCon', {
@@ -49,7 +60,7 @@ const DeskTimeline = () => {
         scrollTrigger: {
             trigger: '.section3Con',
             start: 'top top',
-            end: '300% top',
+            end: '200% top',
             scrub: 1,
             pin: true,
         }
@@ -290,9 +301,23 @@ const update_timelines = () => {
         DeskTimeline()
     }
 }
-update_timelines()
 
-window.scrollTo(0, 0)
+//window.addEventListener('load', () => {
+update_timelines()
+//window.scrollTo(0, 0)
+//    console.log('loaded')
+//})
+
+window.addEventListener('load', () => {
+    const isloaded = localStorage.getItem('isloaded')
+    if (isloaded !== "true") {
+        localStorage.setItem('isloaded', 'true')
+        window.location.reload()
+    } else {
+        localStorage.setItem('isloaded', 'false')
+    }
+})
+
 
 const launchappBtn = document.getElementsByClassName('launchappBtn')
 
