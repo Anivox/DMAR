@@ -19,8 +19,10 @@ const DeskTimeline = () => {
         }
     })
 
-    const slideItem = document.getElementsByClassName('slideItem')[0]
+    //const slideItem = document.getElementsByClassName('slideItem')[0]
+    const slideItem = 614 
     const sideScroll = () => {
+        console.log("width", slideItem.offsetWidth)
         if (window.innerWidth > 1500) {
             console.log("this is being1")
             return 6.2
@@ -48,7 +50,7 @@ const DeskTimeline = () => {
     }
     horizontalScroll
         .to('.slideCon', {
-            x: -slideItem.offsetWidth * sideScroll(),
+            x: -slideItem * sideScroll(),
         })
 
     const coins = document.getElementsByClassName('chooseCoin')
