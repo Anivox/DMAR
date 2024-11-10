@@ -1,130 +1,130 @@
 .section1 {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding-top: 2.5rem;
+  justify-content: center;
+  align-items: center;
+
+  .heroLeft {
+    position: relative;
+    z-index: 100;
     display: flex;
-    padding-top: 2.5rem;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 24px;
 
-    .heroLeft {
-        position: relative;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+    transform: translateX(90px);
 
-        transform: translateX(90px);
+    width: 500px;
 
-        width: 500px;
-
-        &>h1 {
-            font-size: 36px;
-            line-height: 50px;
-        }
-
-        &>p {
-            font-size: 20px;
-            color: var(--gray);
-        }
-
-        &>div {
-            display: flex;
-            gap: 16px;
-
-            &>* {
-                font-size: 16px;
-                padding-inline: 26px;
-                padding-block: 14px;
-                padding-top: 16px;
-                border-radius: 100px;
-                text-decoration: none;
-                font-weight: 600;
-            }
-
-            &>*:first-child {
-                background: var(--yellow);
-                color: var(--black);
-            }
-
-            &>*:last-child {
-                background: var(--black);
-                color: var(--white);
-            }
-        }
+    &>h1 {
+      font-size: 36px;
+      line-height: 50px;
     }
+
+    &>p {
+      font-size: 20px;
+      color: var(--gray);
+    }
+
+    &>div {
+      display: flex;
+      gap: 16px;
+
+      &>* {
+        font-size: 16px;
+        padding-inline: 26px;
+        padding-block: 14px;
+        padding-top: 16px;
+        border-radius: 100px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      &>*:first-child {
+        background: var(--yellow);
+        color: var(--black);
+      }
+
+      &>*:last-child {
+        background: var(--black);
+        color: var(--white);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1260px) {
-    .section1 {
-        .heroLeft {
-            &>h1 {
-                font-size: 26px;
-            }
+  .section1 {
+    .heroLeft {
+      &>h1 {
+        font-size: 26px;
+      }
 
-            &>p {
-                font-size: 18px;
-            }
+      &>p {
+        font-size: 18px;
+      }
 
-        }
-
-        .heroRight {
-            &>* {
-                width: 45vw !important;
-            }
-        }
     }
+
+    .heroRight {
+      &>* {
+        width: 45vw !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .section1 {
-        .heroLeft {
-            &>h1 {}
+  .section1 {
+    .heroLeft {
+      &>h1 {}
 
-            &>div {
-                &>* {}
-            }
-        }
-
-        .heroRight {
-            &>* {}
-        }
+      &>div {
+        &>* {}
+      }
     }
+
+    .heroRight {
+      &>* {}
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .section1 {
-        flex-direction: column;
-        height: fit-content;
-        padding-top: 8rem;
-        justify-content: flex-start;
-        align-items: start;
-        box-sizing: border-box;
+  .section1 {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 8rem;
+    justify-content: flex-start;
+    align-items: start;
+    box-sizing: border-box;
 
-        .heroLeft {
-            max-width: 100vw;
-            padding-inline: 2rem;
-            transform: none;
+    .heroLeft {
+      max-width: 100vw;
+      padding-inline: 2rem;
+      transform: none;
 
-            &>h1 {
-                font-size: 3rem;
-            }
+      &>h1 {
+        font-size: 3rem;
+      }
 
-            &>div {
-                &>* {
-                    scale: 0.9;
-                }
-            }
+      &>div {
+        &>* {
+          scale: 0.9;
         }
-
-        .heroRight {
-            width: 100vw !important;
-            align-self: center;
-
-            &>* {
-                transform: translateX(-6.5%);
-                width: 95vw !important;
-                scale: 1.4;
-            }
-        }
+      }
     }
+
+    .heroRight {
+      width: 100vw !important;
+      align-self: center;
+
+      &>* {
+        transform: translateX(-6.5%);
+        width: 95vw !important;
+        scale: 1.4;
+      }
+    }
+  }
 }
